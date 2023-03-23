@@ -30,7 +30,7 @@ export default function SigninScreen() {
             return;
         }
         try{
-            const { data } = await Axios.post('/api/users/signup', {
+            const { data } = await Axios.post(`${process.env.REACT_APP_API_HOST}/api/users/signup`, {
                 name,
                 email,
                 password,
